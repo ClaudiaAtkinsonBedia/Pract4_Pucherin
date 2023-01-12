@@ -6,9 +6,34 @@ var jugadorActual=0;
 
 function inicio(){
     let introduccion = document.getElementById("intro");
-    introduccion.innerHTML = "¿Cuántos jugadores vais a ser?";
-}
+    let jugar = document.getElementById("jugar");
+    introduccion.innerHTML= "¿Cuántos jugadores vais a ser hoy?";
+    jugar.addEventListener("click", iniciarPartida);
 
+    function iniciarPartida()
+    {
+        jugadorActual++;
+        alert("Es el turno de jugador " + jugadorActual); 
+        dados();
+    }
+    
+    function dados()
+    {
+        var dado1 = Math.floor(Math.random() * 6) + 1;
+        var dado2 = Math.floor(Math.random() * 6) + 1;
+        introduccion.innerHTML = dado1 + " " + dado2;
+        // EN CASO DE HACERLO VISUAL, AQUI TENEMOS CÓMO HACER LA PARTE DE LOS DADOS
+        /*switch(num)
+        {
+            case 1:
+            dom_img.src='./cara1.png';
+            break;
+            case 2:
+            dom_img.src='./cara2.png';
+            break;
+        }*/
+    }
+}
 
 function pucheros(){
     pucheros = new Array (new puchero,new puchero,new puchero,new puchero,new puchero,
