@@ -14,7 +14,7 @@ const casillas = 9;
 //Los canvas se formarán en una elipse  -->
 for (var i = 0; i < casillas; i++) {
   // Crear un elemento canvas
-  var canvas = document.createElement('canvas');
+  var canvas = document.creaClaudiaAtkinsonBedia/Pract4_Pucherinv2teElement('canvas');
   canvas.classList.add('casilla');
   // Establecer el ancho y alto del canvas en 50 (cada canvas será de 50 x 50)
   canvas.width = 120;

@@ -1,14 +1,23 @@
-var jugador = new Object(); 
-
-
-const puchero = {
-    numero:0,
-    fichasDentro:0,
-    casillasMax:0,
-    casillas:{}
+class Jugador{
+    constructor(numero, tokens) {
+        this.numero = numero;
+        this.tokens = tokens;
+        this.puntos = 0;
+      }
 }
 
-const dado={
-    dado1:0,
-    dado2:0
+class Puchero{
+    constructor(numero) {
+        this.numero = numero;
+        this.casillaMax = numero;
+        this.casillaActual = 0;
+      }
+}
+
+
+class Dado{
+    constructor(){
+        this.dado1=0;
+        this.dado2=0;
+    }
 }
